@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="InfraSphere by Cosinfotechs Solutions — Independent, self-hosted, open-source multi-cloud infrastructure control plane. Secure Rust-based governance, reconciliation, and intelligence.">
+  <meta name="description" content="InfraSphere by Cosinfotechs Solutions — Independent multi-cloud infrastructure control plane for secure, unified management across clouds and on-premises environments.">
   <meta name="theme-color" content="#070b14">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';">
-  <title>InfraSphere | Multi-Cloud Control Plane</title>
+  <title>InfraSphere | Cosinfotechs Solutions</title>
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,11 +20,10 @@
         <img src="assets/logo.png" alt="InfraSphere" class="logo">
       </a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#control">Control Plane</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#security">Security</a>
-        <a href="#providers">Providers</a>
-        <a href="https://github.com/SbruiceS/InfraSphere" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Source</a>
+        <a href="#why">Why InfraSphere</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#difference">Difference</a>
+        <a href="#contact">Contact</a>
       </nav>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -36,136 +35,101 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <div class="status-bar">
-            <span class="status-dot"></span>
-            <span>SYSTEM ONLINE · PHASE 1–3 FOUNDATION</span>
-          </div>
           <p class="eyebrow">Cosinfotechs Solutions</p>
           <h1>InfraSphere</h1>
-          <p class="tagline">Independent multi-cloud infrastructure control plane.</p>
-          <p class="lead">Define, reconcile, secure, and govern infrastructure across AWS, Azure, GCP, Kubernetes, VMware, Proxmox and more — through a unified, highly secure Rust control plane.</p>
+          <p class="tagline">Unified control for multi-cloud and hybrid infrastructure.</p>
+          <p class="lead">Manage, secure, and govern infrastructure across public clouds and on-premises environments from a single, independent control plane designed for enterprise reliability and compliance.</p>
           <div class="hero-actions">
-            <a href="https://github.com/SbruiceS/InfraSphere" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Source</a>
-            <a href="#control" class="btn btn-secondary">Inspect Control Plane</a>
-          </div>
-          <div class="metrics">
-            <div class="metric"><span class="metric-value">26+</span><span class="metric-label">Crates</span></div>
-            <div class="metric"><span class="metric-value">10</span><span class="metric-label">Providers</span></div>
-            <div class="metric"><span class="metric-value">OIDC</span><span class="metric-label">+ RBAC</span></div>
-            <div class="metric"><span class="metric-value">Apache-2.0</span><span class="metric-label">License</span></div>
+            <a href="#why" class="btn btn-primary">Why It Matters</a>
+            <a href="#use-cases" class="btn btn-secondary">Explore Use Cases</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="control" class="section">
+    <section id="why" class="section">
       <div class="container">
-        <h2>Control Plane</h2>
-        <p class="section-lead">Owns desired state, observed state, operations, and audit. Providers implement a versioned SDK contract.</p>
+        <h2>Why InfraSphere Matters</h2>
+        <p class="section-lead">Organizations operating across multiple clouds face fragmentation, inconsistent security, and operational complexity. InfraSphere brings order with a purpose-built control plane.</p>
         <div class="panel-grid">
           <div class="panel">
-            <div class="panel-header"><span class="panel-dot"></span> Resource Model</div>
-            <p>PostgreSQL system of record. Organizations, projects, resources, operations, graph edges, plans, approvals, policy bundles, outbox events.</p>
+            <div class="panel-header"><span class="panel-dot"></span> Independence</div>
+            <p>Self-hosted and independent of any single cloud provider. Retain full control over your infrastructure management layer.</p>
           </div>
           <div class="panel">
-            <div class="panel-header"><span class="panel-dot"></span> Reconciliation Engine</div>
-            <p>Durable state machine with leases, retries, idempotency, cancellation, drift detection, and conflict resolution. On-demand and scheduled.</p>
+            <div class="panel-header"><span class="panel-dot"></span> Consistency</div>
+            <p>Apply uniform policies, visibility, and operations across heterogeneous environments without vendor lock-in.</p>
           </div>
           <div class="panel">
-            <div class="panel-header"><span class="panel-dot"></span> Graph + Planner</div>
-            <p>Dependency graph with cycle detection, blast radius, topological order. Policy-aware change planner evaluates risk before execution.</p>
+            <div class="panel-header"><span class="panel-dot"></span> Security & Governance</div>
+            <p>Built with security and compliance as first-class concerns. Centralized control reduces risk and simplifies audit requirements.</p>
           </div>
           <div class="panel">
-            <div class="panel-header"><span class="panel-dot"></span> Intent & Placement</div>
-            <p>Translate high-level requirements into validated plans. Placement optimizer weighs cost, latency, policy, capacity, and availability.</p>
+            <div class="panel-header"><span class="panel-dot"></span> Operational Efficiency</div>
+            <p>Automate reconciliation, detect drift, and manage change with confidence across your entire infrastructure estate.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="capabilities" class="section section-alt">
+    <section id="use-cases" class="section section-alt">
       <div class="container">
-        <h2>Capabilities</h2>
-        <p class="section-lead">Production-oriented foundations for infrastructure intelligence, automation, security, and governance.</p>
+        <h2>What InfraSphere Is Used For</h2>
+        <p class="section-lead">Designed for organizations that require reliable, secure, and governed infrastructure management at scale.</p>
         <div class="cards">
-          <article class="card" data-delay="0">
-            <div class="card-icon">⚡</div>
-            <h3>Durable Reconciliation</h3>
-            <p>Operation state machine with leases, retries, idempotency, cancel, drift, and conflict handling.</p>
-          </article>
-          <article class="card" data-delay="1">
-            <div class="card-icon">🔐</div>
-            <h3>Security First</h3>
-            <p>OIDC JWT, deny-by-default RBAC, opaque portal sessions, CSRF, rate limits, strict headers.</p>
-          </article>
-          <article class="card" data-delay="2">
-            <div class="card-icon">🕸️</div>
-            <h3>Dependency Graph</h3>
-            <p>Model relationships, detect cycles, compute blast radius, topological execution order.</p>
-          </article>
-          <article class="card" data-delay="3">
-            <div class="card-icon">🎯</div>
-            <h3>Intent Engine</h3>
-            <p>High-level requirements to validated resource plans with constraints and templates.</p>
-          </article>
-          <article class="card" data-delay="4">
-            <div class="card-icon">📊</div>
-            <h3>Security Analysis</h3>
-            <p>Drift detection, attack-path analysis, closed-loop auto-remediation, multi-cloud webhooks.</p>
-          </article>
-          <article class="card" data-delay="5">
+          <article class="card">
             <div class="card-icon">🏢</div>
-            <h3>Multi-Tenant</h3>
-            <p>Organizations, projects, audit trails, federation-aware design, RLS migration path.</p>
+            <h3>Enterprise Multi-Cloud</h3>
+            <p>Consolidate management of resources across AWS, Azure, GCP, and other platforms under one control plane.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔒</div>
+            <h3>Security & Compliance</h3>
+            <p>Enforce consistent security posture, policy, and audit trails across diverse environments.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>Infrastructure Automation</h3>
+            <p>Define desired state and continuously reconcile reality, reducing manual effort and configuration drift.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3>Hybrid Environments</h3>
+            <p>Bridge public cloud and on-premises infrastructure with a unified operational model.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📊</div>
+            <h3>Operational Intelligence</h3>
+            <p>Gain visibility into dependencies, change impact, and infrastructure health across the organization.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Risk Reduction</h3>
+            <p>Minimize operational risk through controlled change, policy enforcement, and clear accountability.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="security" class="section">
+    <section id="difference" class="section">
       <div class="container">
-        <h2>Security Model</h2>
-        <p class="section-lead">Explicit trust boundaries, least privilege, defense in depth. Phase 1 limitations documented; production readiness not claimed.</p>
+        <h2>How InfraSphere Is Different</h2>
+        <p class="section-lead">Not another cloud console or proprietary service. A dedicated, independent control plane built for organizations that demand ownership and consistency.</p>
         <div class="security-grid">
-          <div class="sec-item"><strong>Opaque Sessions</strong><span>HttpOnly, SameSite=Strict cookie stores only session UUID. Tokens never leave server.</span></div>
-          <div class="sec-item"><strong>CSRF + Rate Limits</strong><span>HMAC CSRF on state changes. Login and API rate limiting. Strict browser headers.</span></div>
-          <div class="sec-item"><strong>RBAC + Audit</strong><span>Deny-by-default. All security-relevant actions recorded. No hardcoded secrets.</span></div>
-          <div class="sec-item"><strong>Threat Model</strong><span>STRIDE analysis. Input validation, optimistic concurrency, provider isolation.</span></div>
+          <div class="sec-item"><strong>Provider-Agnostic</strong><span>Works across multiple clouds and on-premises systems rather than locking you into one vendor’s tools.</span></div>
+          <div class="sec-item"><strong>Self-Hosted Control</strong><span>You own the control plane. No dependency on a third-party SaaS for core infrastructure management.</span></div>
+          <div class="sec-item"><strong>Security-First Design</strong><span>Architecture prioritizes least privilege, auditability, and defense-in-depth principles.</span></div>
+          <div class="sec-item"><strong>Unified Operations</strong><span>One model for desired state, observed state, and change management across your entire estate.</span></div>
         </div>
       </div>
     </section>
 
-    <section id="providers" class="section section-alt">
+    <section id="contact" class="section cta">
       <div class="container">
-        <h2>Providers</h2>
-        <p class="section-lead">Versioned Provider SDK. Real REST and thin-cloud paths. Read-only discovery default.</p>
-        <div class="provider-grid">
-          <div class="provider">AWS</div>
-          <div class="provider">Azure</div>
-          <div class="provider">GCP</div>
-          <div class="provider">Kubernetes</div>
-          <div class="provider">VMware</div>
-          <div class="provider">Proxmox</div>
-          <div class="provider">Cloudflare</div>
-          <div class="provider">OCI</div>
-          <div class="provider">OpenStack</div>
-          <div class="provider">Mock</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta">
-      <div class="container">
-        <h2>Get Started</h2>
-        <div class="code-block">
-          <pre><code>git clone https://github.com/SbruiceS/InfraSphere.git
-cd InfraSphere
-docker compose -f deployments/compose/docker-compose.yml up -d --build
-curl -s http://127.0.0.1:8080/healthz</code></pre>
-        </div>
+        <h2>Learn More</h2>
+        <p class="section-lead">InfraSphere is developed by Cosinfotechs Solutions for organizations requiring secure, independent infrastructure control.</p>
         <div class="hero-actions">
-          <a href="https://github.com/SbruiceS/InfraSphere" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a href="https://github.com/SbruiceS/InfraSphere/blob/main/SECURITY.md" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Security Policy</a>
+          <a href="mailto:contact@cosinfotechs.com" class="btn btn-primary">Contact</a>
         </div>
       </div>
     </section>
@@ -176,15 +140,15 @@ curl -s http://127.0.0.1:8080/healthz</code></pre>
       <div class="footer-inner">
         <div>
           <img src="assets/logo.png" alt="InfraSphere" class="logo-footer">
-          <p>Independent multi-cloud control plane.<br>Cosinfotechs Solutions · Sbruice Singh</p>
+          <p>Unified multi-cloud infrastructure control.<br>Cosinfotechs Solutions</p>
         </div>
         <div class="footer-links">
-          <a href="https://github.com/SbruiceS/InfraSphere" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://github.com/SbruiceS/InfraSphere/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a>
-          <a href="https://github.com/SbruiceS/InfraSphere/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a>
+          <a href="#why">Why</a>
+          <a href="#use-cases">Use Cases</a>
+          <a href="#difference">Difference</a>
         </div>
       </div>
-      <p class="copyright">© 2026 Cosinfotechs Solutions · Apache-2.0</p>
+      <p class="copyright">© 2026 Cosinfotechs Solutions</p>
     </div>
   </footer>
 
