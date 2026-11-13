@@ -241,3 +241,52 @@ h2 { animation: fadeUp 0.6s ease both; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Diagram animations */
+.diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 2rem 0 1rem;
+}
+.diag-node {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  animation: nodePulse 3s ease-in-out infinite;
+}
+.diag-node.small { font-size: 0.85rem; padding: 0.7rem 1rem; animation-delay: 0.5s; }
+.diag-arrow {
+  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: 700;
+  animation: arrowFlow 1.8s ease-in-out infinite;
+}
+.diagram-sub { margin-top: 0.5rem; }
+.diagram-note { text-align: center; color: var(--text-muted); max-width: 640px; margin: 1.5rem auto 0; font-size: 0.95rem; }
+
+@keyframes nodePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(59,130,246,0); }
+}
+@keyframes arrowFlow {
+  0%, 100% { opacity: 0.4; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(4px); }
+}
+
+.logo, .logo-footer {
+  background: transparent !important;
+  filter: drop-shadow(0 2px 10px var(--glow));
+}
+.logo { height: 44px; }
+.logo-footer { height: 34px; }
+
+@media (max-width: 640px) {
+  .diagram { flex-direction: column; }
+  .diag-arrow { transform: rotate(90deg); }
+}
