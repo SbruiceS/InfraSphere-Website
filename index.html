@@ -7,27 +7,30 @@
   <meta name="description" content="InfraSphere by Cosinfotechs Solutions — Independent, self-hosted multi-cloud and hybrid infrastructure control plane for desired-state management, governance, and operational consistency.">
   <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="styles.css?v=motion2">
+  <link rel="stylesheet" href="styles.css?v=full18">
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
       <a href="#top"><img src="assets/logo.png" alt="InfraSphere" class="logo"></a>
       <nav class="nav" aria-label="Main">
-        <a href="#platform">Platform</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#reconciliation">Reconciliation</a>
-        <a href="#dashboard">Dashboard</a>
-        <a href="#integrations">Integrations</a>
-        <a href="#security">Security</a>
-        <a href="#contact">Contact</a>
+        <a href="#platform" data-section="platform">Platform</a>
+        <a href="#capabilities" data-section="capabilities">Capabilities</a>
+        <a href="#architecture" data-section="architecture">Architecture</a>
+        <a href="#reconciliation" data-section="reconciliation">Reconciliation</a>
+        <a href="#dashboard" data-section="dashboard">Dashboard</a>
+        <a href="#topology" data-section="topology">Topology</a>
+        <a href="#integrations" data-section="integrations">Integrations</a>
+        <a href="#security" data-section="security">Security</a>
+        <a href="#use-cases" data-section="use-cases">Use Cases</a>
+        <a href="#contact" data-section="contact">Contact</a>
       </nav>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main id="top">
+    <!-- PART 4: Hero with interactive topology -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -40,55 +43,60 @@
           </div>
         </div>
         <div class="hero-visual">
-          <svg viewBox="0 0 480 320" class="topology" aria-label="Illustrative infrastructure topology">
+          <svg viewBox="0 0 520 360" class="topology" id="heroTopology" aria-label="Illustrative infrastructure topology">
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
               </marker>
             </defs>
-            <line class="conn" x1="240" y1="160" x2="80" y2="60" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <line class="conn" x1="240" y1="160" x2="400" y2="60" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <line class="conn" x1="240" y1="160" x2="60" y2="180" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <line class="conn" x1="240" y1="160" x2="420" y2="180" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <line class="conn" x1="240" y1="160" x2="160" y2="270" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <line class="conn" x1="240" y1="160" x2="320" y2="270" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <circle class="center-node" cx="240" cy="160" r="48" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
-            <text x="240" y="156" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">InfraSphere</text>
-            <text x="240" y="170" text-anchor="middle" font-size="9" fill="#64748B">Control Plane</text>
-            <g class="provider" data-status="In Development">
-              <rect x="40" y="40" width="70" height="32" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
-              <text x="75" y="60" text-anchor="middle" font-size="10" fill="#111827">AWS</text>
+            <g class="connections">
+              <line class="conn" data-target="aws" x1="260" y1="180" x2="90" y2="70"/>
+              <line class="conn" data-target="azure" x1="260" y1="180" x2="430" y2="70"/>
+              <line class="conn" data-target="gcp" x1="260" y1="180" x2="70" y2="200"/>
+              <line class="conn" data-target="k8s" x1="260" y1="180" x2="450" y2="200"/>
+              <line class="conn" data-target="vmware" x1="260" y1="180" x2="150" y2="300"/>
+              <line class="conn" data-target="onprem" x1="260" y1="180" x2="370" y2="300"/>
             </g>
-            <g class="provider">
-              <rect x="360" y="40" width="70" height="32" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
-              <text x="395" y="60" text-anchor="middle" font-size="10" fill="#111827">Azure</text>
+            <circle class="center-node" cx="260" cy="180" r="52" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+            <text x="260" y="176" text-anchor="middle" font-size="12" font-weight="600" fill="#111827">InfraSphere</text>
+            <text x="260" y="192" text-anchor="middle" font-size="9" fill="#64748B">Control Plane</text>
+            <g class="provider" data-name="AWS" data-status="In Development" data-role="Public cloud provider adapter">
+              <rect x="50" y="50" width="80" height="36" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
+              <text x="90" y="72" text-anchor="middle" font-size="11" fill="#111827">AWS</text>
             </g>
-            <g class="provider">
-              <rect x="20" y="164" width="80" height="32" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
-              <text x="60" y="184" text-anchor="middle" font-size="10" fill="#111827">GCP</text>
+            <g class="provider" data-name="Azure" data-status="In Development" data-role="Public cloud provider adapter">
+              <rect x="390" y="50" width="80" height="36" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
+              <text x="430" y="72" text-anchor="middle" font-size="11" fill="#111827">Azure</text>
             </g>
-            <g class="provider">
-              <rect x="380" y="164" width="80" height="32" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
-              <text x="420" y="184" text-anchor="middle" font-size="10" fill="#111827">Kubernetes</text>
+            <g class="provider" data-name="GCP" data-status="In Development" data-role="Public cloud provider adapter">
+              <rect x="30" y="184" width="80" height="36" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
+              <text x="70" y="206" text-anchor="middle" font-size="11" fill="#111827">GCP</text>
             </g>
-            <g class="provider">
-              <rect x="100" y="250" width="90" height="32" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
-              <text x="145" y="270" text-anchor="middle" font-size="10" fill="#111827">VMware</text>
+            <g class="provider" data-name="Kubernetes" data-status="In Development" data-role="Container platform adapter">
+              <rect x="410" y="184" width="90" height="36" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
+              <text x="455" y="206" text-anchor="middle" font-size="11" fill="#111827">Kubernetes</text>
             </g>
-            <g class="provider">
-              <rect x="290" y="250" width="90" height="32" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
-              <text x="335" y="270" text-anchor="middle" font-size="10" fill="#111827">On-premises</text>
+            <g class="provider" data-name="VMware" data-status="Planned" data-role="Virtualization adapter">
+              <rect x="110" y="280" width="90" height="36" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
+              <text x="155" y="302" text-anchor="middle" font-size="11" fill="#111827">VMware</text>
+            </g>
+            <g class="provider" data-name="On-premises" data-status="Planned" data-role="Private / on-premises environments">
+              <rect x="330" y="280" width="100" height="36" rx="4" fill="#F7F9FC" stroke="#E2E8F0"/>
+              <text x="380" y="302" text-anchor="middle" font-size="11" fill="#111827">On-premises</text>
             </g>
           </svg>
+          <div class="hover-info" id="heroHover">Hover a provider for status and role</div>
           <p class="visual-note">Illustrative architecture visualization — not live infrastructure connections</p>
         </div>
       </div>
     </section>
 
+    <!-- PART 5 + 12: Platform and capabilities with expanded explanations -->
     <section id="platform" class="section">
       <div class="container">
-        <h2>Platform Overview</h2>
-        <p class="section-lead">InfraSphere is designed as an independent, self-hosted infrastructure control plane. It provides a unified operational model for desired-state management, visibility, and governance across heterogeneous environments.</p>
+        <h2>What is an Infrastructure Control Plane?</h2>
+        <p class="section-lead">An infrastructure control plane is a centralized system that maintains the intended configuration of infrastructure resources and continuously compares it against the actual state observed in the environments it manages. InfraSphere is designed as an independent, self-hosted control plane so organizations retain ownership of their operational model across multi-cloud and hybrid environments.</p>
+        <p class="section-lead">Why multi-cloud management matters: organizations run workloads across multiple public clouds, private clouds, virtualization platforms, and on-premises systems. Without a unified control plane, each environment is managed with separate tools, leading to inconsistent policy, configuration drift, and limited visibility. Provider independence reduces dependence on any single vendor’s management console.</p>
       </div>
     </section>
 
@@ -96,63 +104,98 @@
       <div class="container">
         <h2>Capabilities</h2>
         <div class="grid">
-          <article class="card expandable"><h3>Multi-Environment Management</h3><p>Centralized operational model across public cloud, virtualization, containers, and on-premises.</p><div class="detail">Inputs: environment definitions. Outputs: unified inventory and change coordination.</div></article>
-          <article class="card expandable"><h3>Desired-State Management</h3><p>Express intended configuration once and maintain it as the source of operational intent.</p><div class="detail">Inputs: desired specifications. Outputs: comparison baseline for observed state.</div></article>
-          <article class="card expandable"><h3>Continuous Reconciliation</h3><p>Identify differences between desired and observed state and support controlled alignment.</p><div class="detail">Inputs: desired and observed snapshots. Outputs: drift reports and change proposals.</div></article>
-          <article class="card expandable"><h3>Policy and Governance</h3><p>Evaluate changes against organizational policy before they are applied.</p><div class="detail">Inputs: proposed changes. Outputs: allow / deny / require-approval decisions.</div></article>
-          <article class="card expandable"><h3>Infrastructure Visibility</h3><p>Understand resource relationships, change impact, and operational health.</p><div class="detail">Inputs: inventory and observations. Outputs: dependency and health views.</div></article>
-          <article class="card expandable"><h3>Hybrid Operations</h3><p>Apply one operational model across cloud and on-premises infrastructure.</p><div class="detail">Inputs: mixed environment targets. Outputs: consistent control and reporting.</div></article>
+          <article class="card expandable">
+            <h3>Multi-Environment Management</h3>
+            <p>Centralized operational model across public cloud, virtualization, containers, and on-premises.</p>
+            <div class="detail"><strong>Purpose:</strong> One place to define and observe infrastructure across heterogeneous environments.<br><strong>Inputs:</strong> Environment connections and resource definitions.<br><strong>Outputs:</strong> Unified inventory and change coordination.<br><strong>Relationship:</strong> Feeds desired-state and reconciliation.</div>
+          </article>
+          <article class="card expandable">
+            <h3>Desired-State Management</h3>
+            <p>Express intended configuration once and maintain it as the source of operational intent.</p>
+            <div class="detail"><strong>Purpose:</strong> Desired state is the authoritative declaration of what infrastructure should look like.<br><strong>Inputs:</strong> Desired specifications.<br><strong>Outputs:</strong> Comparison baseline for observed state.<br><strong>Relationship:</strong> Compared against observed state by reconciliation.</div>
+          </article>
+          <article class="card expandable">
+            <h3>Continuous Reconciliation</h3>
+            <p>Identify differences between desired and observed state and support controlled alignment.</p>
+            <div class="detail"><strong>Purpose:</strong> Detect and report drift so operators can restore consistency under policy control.<br><strong>Inputs:</strong> Desired and observed snapshots.<br><strong>Outputs:</strong> Drift reports and change proposals.<br><strong>Relationship:</strong> Uses policy evaluation before any change is authorized.</div>
+          </article>
+          <article class="card expandable">
+            <h3>Policy and Governance</h3>
+            <p>Evaluate changes against organizational policy before they are applied.</p>
+            <div class="detail"><strong>Purpose:</strong> Ensure infrastructure changes stay within approved boundaries.<br><strong>Inputs:</strong> Proposed changes.<br><strong>Outputs:</strong> Allow, deny, or require-approval decisions.<br><strong>Relationship:</strong> Gates reconciliation actions.</div>
+          </article>
+          <article class="card expandable">
+            <h3>Infrastructure Visibility and Intelligence</h3>
+            <p>Understand resource relationships, change impact, and operational health.</p>
+            <div class="detail"><strong>Purpose:</strong> Provide the context needed for safe change and troubleshooting.<br><strong>Inputs:</strong> Inventory and observations.<br><strong>Outputs:</strong> Dependency and health views.<br><strong>Relationship:</strong> Supports architecture and security analysis.</div>
+          </article>
+          <article class="card expandable">
+            <h3>Hybrid Infrastructure Operations</h3>
+            <p>Apply one operational model across cloud and on-premises infrastructure.</p>
+            <div class="detail"><strong>Purpose:</strong> Avoid separate processes for cloud and private environments.<br><strong>Inputs:</strong> Mixed environment targets.<br><strong>Outputs:</strong> Consistent control and reporting.<br><strong>Relationship:</strong> Extends multi-environment management beyond public cloud.</div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- PART 6: Architecture Explorer -->
     <section id="architecture" class="section">
       <div class="container">
         <h2>Interactive Architecture Explorer</h2>
-        <p class="section-lead">Conceptual layered model. Selecting a layer shows its role. Components are design objectives unless noted otherwise.</p>
+        <p class="section-lead">Conceptual layered model. Select a layer to view its role, inputs, and outputs. Components are design objectives unless noted otherwise.</p>
         <div class="arch-explorer">
-          <div class="layers">
-            <button class="layer" data-info="External environments the control plane is designed to manage.">Layer 1 — Infrastructure Providers</button>
-            <button class="layer" data-info="Provider adapters, discovery, state collection and normalization (conceptual / in development).">Layer 2 — Infrastructure Connectors</button>
-            <button class="layer" data-info="Resource inventory, desired/observed state, change coordination, reconciliation responsibilities.">Layer 3 — Control Plane</button>
-            <button class="layer" data-info="Policy evaluation, identity boundaries, authorization, change approval, auditability.">Layer 4 — Governance and Security</button>
-            <button class="layer" data-info="Resource relationships, dependency visibility, configuration analysis, operational reporting.">Layer 5 — Intelligence and Operations</button>
-            <button class="layer" data-info="Infrastructure explorer, environment management, policy management, administrative interface.">Layer 6 — Management Interface</button>
+          <div class="layers" id="layerList">
+            <button class="layer" data-layer="1" data-info="External environments the control plane is designed to manage: AWS, Azure, GCP, Kubernetes, VMware, Proxmox, on-premises. Inputs: none. Outputs: resources observed by connectors.">Layer 1 — Infrastructure Providers</button>
+            <button class="layer" data-layer="2" data-info="Provider adapters, discovery, API communication, state collection and normalization. Status: conceptual / in development. Inputs: provider APIs. Outputs: normalized observations.">Layer 2 — Infrastructure Connectors</button>
+            <button class="layer" data-layer="3" data-info="Resource inventory, desired-state representation, observed-state representation, change coordination, reconciliation responsibilities. Inputs: connector observations + desired specs. Outputs: drift analysis and change proposals.">Layer 3 — Control Plane</button>
+            <button class="layer" data-layer="4" data-info="Policy evaluation, identity boundaries, authorization, change approval, auditability. Inputs: change proposals. Outputs: authorized or denied actions and audit records.">Layer 4 — Governance and Security</button>
+            <button class="layer" data-layer="5" data-info="Resource relationships, dependency visibility, configuration analysis, operational reporting, infrastructure health. Inputs: inventory and change history. Outputs: impact and health views.">Layer 5 — Intelligence and Operations</button>
+            <button class="layer" data-layer="6" data-info="Infrastructure explorer, environment management, policy management, administrative interface, operational visualization. Inputs: all lower-layer data. Outputs: operator decisions.">Layer 6 — Management Interface</button>
           </div>
-          <div class="arch-info" id="archInfo">Select a layer to view its architectural role.</div>
+          <div class="arch-info" id="archInfo">Select a layer to view its architectural role, inputs, and outputs.</div>
         </div>
-        <p class="note">Conceptual architecture illustration. Not a claim of fully implemented production layers.</p>
+        <div class="arch-controls">
+          <button id="archReset" class="btn btn-secondary">Reset View</button>
+        </div>
+        <p class="note">Conceptual architecture illustration. Not a claim of fully implemented production layers. Zoom and pan are available via browser controls on the diagram area.</p>
       </div>
     </section>
 
+    <!-- PART 7: Reconciliation Simulator with dynamic panels -->
     <section id="reconciliation" class="section section-alt">
       <div class="container">
         <h2>Desired-State Reconciliation Simulator</h2>
-        <p class="section-lead">Illustrative demonstration of the intended operational model. Not connected to live infrastructure.</p>
+        <p class="section-lead">From Desired State to Operational Consistency. Illustrative demonstration of the intended operational model. Not connected to live infrastructure. No modifications are performed.</p>
         <div class="sim-panels">
-          <div class="sim-panel"><h3>Desired State</h3><ul id="desiredList"><li>3 application instances</li><li>Approved network</li><li>Required security policy</li><li>Defined resource allocation</li></ul></div>
-          <div class="sim-panel"><h3>Observed State</h3><ul id="observedList"><li>2 application instances</li><li>Configuration mismatch</li><li>Policy violation</li></ul></div>
+          <div class="sim-panel"><h3>Desired State</h3><ul id="desiredList"></ul></div>
+          <div class="sim-panel"><h3>Observed State</h3><ul id="observedList"></ul></div>
         </div>
         <div class="sim-controls">
           <button id="simPrev" class="btn btn-secondary">Previous</button>
           <button id="simNext" class="btn btn-primary">Next</button>
           <button id="simReset" class="btn btn-secondary">Reset</button>
         </div>
-        <p class="sim-step" id="simStep">Step 1: Define Desired State</p>
-        <p class="note">Simulated product demonstration only. No infrastructure is modified.</p>
+        <p class="sim-step" id="simStep"></p>
+        <p class="sim-detail" id="simDetail"></p>
+        <p class="note">Simulated product demonstration only. Sample data is illustrative.</p>
       </div>
     </section>
 
+    <!-- PART 8: Dashboard Preview -->
     <section id="dashboard" class="section">
       <div class="container">
         <h2>Infrastructure Dashboard Preview</h2>
-        <p class="section-lead">Illustrative management interface. Sample data is not live telemetry.</p>
+        <p class="section-lead">Illustrative management interface showing a possible enterprise experience. Sample data is not live telemetry.</p>
         <div class="dash">
           <aside class="dash-side">
             <button class="dash-nav active" data-panel="overview">Overview</button>
+            <button class="dash-nav" data-panel="environments">Environments</button>
             <button class="dash-nav" data-panel="inventory">Resource Inventory</button>
+            <button class="dash-nav" data-panel="desired">Desired State</button>
+            <button class="dash-nav" data-panel="observed">Observed State</button>
             <button class="dash-nav" data-panel="drift">Configuration Drift</button>
             <button class="dash-nav" data-panel="policy">Policy Evaluation</button>
+            <button class="dash-nav" data-panel="history">Change History</button>
           </aside>
           <div class="dash-main">
             <div class="dash-panel active" id="panel-overview">
@@ -160,14 +203,29 @@
               <p>Environments: 4 · Resources: 128 · Drift items: 3 · Policy violations: 1</p>
               <p class="demo-label">ILLUSTRATIVE DEMO DATA — NOT LIVE INFRASTRUCTURE TELEMETRY</p>
             </div>
+            <div class="dash-panel" id="panel-environments">
+              <h3>Environments</h3>
+              <p>AWS Production · Azure Staging · GCP Dev · On-premises Data Center</p>
+              <p class="demo-label">ILLUSTRATIVE DEMO DATA</p>
+            </div>
             <div class="dash-panel" id="panel-inventory">
               <h3>Resource Inventory</h3>
               <p>Sample: 42 EC2 instances, 18 VMs, 6 Kubernetes namespaces, 12 networks.</p>
               <p class="demo-label">ILLUSTRATIVE DEMO DATA</p>
             </div>
+            <div class="dash-panel" id="panel-desired">
+              <h3>Desired State</h3>
+              <p>3 application instances · Approved network · Required security policy · Defined allocation</p>
+              <p class="demo-label">ILLUSTRATIVE DEMO DATA</p>
+            </div>
+            <div class="dash-panel" id="panel-observed">
+              <h3>Observed State</h3>
+              <p>2 application instances · Configuration mismatch · Policy violation</p>
+              <p class="demo-label">ILLUSTRATIVE DEMO DATA</p>
+            </div>
             <div class="dash-panel" id="panel-drift">
               <h3>Configuration Drift</h3>
-              <p>Missing instance, unexpected security group rule, mismatched storage class.</p>
+              <p>Missing instance · Unexpected security group rule · Mismatched storage class</p>
               <p class="demo-label">ILLUSTRATIVE DEMO DATA</p>
             </div>
             <div class="dash-panel" id="panel-policy">
@@ -175,40 +233,130 @@
               <p>1 policy violation detected. Change requires authorization.</p>
               <p class="demo-label">ILLUSTRATIVE DEMO DATA</p>
             </div>
+            <div class="dash-panel" id="panel-history">
+              <h3>Change History</h3>
+              <p>2026-11-12: Instance count adjusted · 2026-11-11: Network rule reviewed</p>
+              <p class="demo-label">ILLUSTRATIVE DEMO DATA</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PART 9: Topology Explorer -->
+    <section id="topology" class="section section-alt">
+      <div class="container">
+        <h2>Infrastructure Topology Explorer</h2>
+        <p class="section-lead">Hierarchical illustrative topology. Select nodes to view details. All data is sample and labeled as such.</p>
+        <div class="topo-explorer">
+          <div class="topo-tree" id="topoTree">
+            <div class="topo-node" data-detail="Public cloud provider. Status: In Development.">AWS
+              <div class="topo-child" data-detail="Sample environment. Illustrative.">Production
+                <div class="topo-child" data-detail="Sample resource group. Illustrative.">App Cluster
+                  <div class="topo-child" data-detail="Sample host. Illustrative.">Host-01
+                    <div class="topo-child" data-detail="Sample compute instance. Illustrative.">Instance-A</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="topo-node" data-detail="Container platform. Status: In Development.">Kubernetes
+              <div class="topo-child" data-detail="Sample namespace. Illustrative.">default
+                <div class="topo-child" data-detail="Sample workload. Illustrative.">Deployment</div>
+              </div>
+            </div>
+            <div class="topo-node" data-detail="On-premises. Status: Planned.">On-premises
+              <div class="topo-child" data-detail="Sample virtualization. Illustrative.">Hypervisor</div>
+            </div>
+          </div>
+          <div class="topo-detail" id="topoDetail">Select a node for details.</div>
+        </div>
+        <input type="search" id="topoSearch" placeholder="Search illustrative topology…" class="search-box" aria-label="Search topology">
+        <p class="note">Sample infrastructure data only. Not live topology.</p>
+      </div>
+    </section>
+
+    <!-- PART 13: Scroll-driven storytelling -->
+    <section id="story" class="section">
+      <div class="container">
+        <h2>How the Operational Model Works</h2>
+        <div class="story-steps">
+          <div class="story-step" data-step="1"><strong>1. Infrastructure providers appear</strong><p>Environments are registered as targets for management.</p></div>
+          <div class="story-step" data-step="2"><strong>2. Connections form</strong><p>Connectors collect observed state from each environment.</p></div>
+          <div class="story-step" data-step="3"><strong>3. Control plane activates</strong><p>Desired and observed state are held side by side.</p></div>
+          <div class="story-step" data-step="4"><strong>4. Policy evaluation</strong><p>Proposed changes are checked against governance rules.</p></div>
+          <div class="story-step" data-step="5"><strong>5. Drift becomes visible</strong><p>Differences are identified and reported.</p></div>
+          <div class="story-step" data-step="6"><strong>6. Reconciliation progresses</strong><p>Authorized changes move the environment toward desired state.</p></div>
+          <div class="story-step" data-step="7"><strong>7. Consistency is verified</strong><p>Observed state is re-checked against desired state.</p></div>
+        </div>
+        <p class="note">Scroll-triggered narrative of the intended model. Conceptual only.</p>
+      </div>
+    </section>
+
+    <!-- PART 11: Integrations -->
     <section id="integrations" class="section section-alt">
       <div class="container">
         <h2>Integrations Ecosystem</h2>
-        <p class="section-lead">Statuses reflect current maturity. Nothing is marked Available unless fully verified.</p>
-        <div class="grid">
-          <article class="card"><h3>AWS</h3><p>Public Cloud · <em>In Development</em></p></article>
-          <article class="card"><h3>Microsoft Azure</h3><p>Public Cloud · <em>In Development</em></p></article>
-          <article class="card"><h3>Google Cloud Platform</h3><p>Public Cloud · <em>In Development</em></p></article>
-          <article class="card"><h3>Kubernetes</h3><p>Container Platforms · <em>In Development</em></p></article>
-          <article class="card"><h3>Proxmox</h3><p>Virtualization · <em>In Development</em></p></article>
-          <article class="card"><h3>VMware</h3><p>Virtualization · <em>Planned</em></p></article>
-          <article class="card"><h3>On-premises / Private Cloud</h3><p>Infrastructure · <em>Planned</em></p></article>
+        <p class="section-lead">Statuses reflect current maturity. Nothing is marked Available unless fully verified for production use.</p>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="cloud">Public Cloud</button>
+          <button class="filter-btn" data-filter="container">Container</button>
+          <button class="filter-btn" data-filter="virt">Virtualization</button>
+          <button class="filter-btn" data-filter="onprem">On-premises</button>
+        </div>
+        <div class="grid" id="integrationGrid">
+          <article class="card" data-cat="cloud"><h3>AWS</h3><p>Public Cloud · <em>In Development</em></p><div class="detail">Provider adapter for Amazon Web Services resources. Status: In Development.</div></article>
+          <article class="card" data-cat="cloud"><h3>Microsoft Azure</h3><p>Public Cloud · <em>In Development</em></p><div class="detail">Provider adapter for Azure resources. Status: In Development.</div></article>
+          <article class="card" data-cat="cloud"><h3>Google Cloud Platform</h3><p>Public Cloud · <em>In Development</em></p><div class="detail">Provider adapter for GCP resources. Status: In Development.</div></article>
+          <article class="card" data-cat="container"><h3>Kubernetes</h3><p>Container Platforms · <em>In Development</em></p><div class="detail">Adapter for Kubernetes resources. Status: In Development.</div></article>
+          <article class="card" data-cat="virt"><h3>Proxmox</h3><p>Virtualization · <em>In Development</em></p><div class="detail">Adapter for Proxmox. Status: In Development.</div></article>
+          <article class="card" data-cat="virt"><h3>VMware</h3><p>Virtualization · <em>Planned</em></p><div class="detail">Adapter for VMware. Status: Planned.</div></article>
+          <article class="card" data-cat="onprem"><h3>On-premises / Private Cloud</h3><p>Infrastructure · <em>Planned</em></p><div class="detail">Support for private and on-premises environments. Status: Planned.</div></article>
         </div>
       </div>
     </section>
 
+    <!-- PART 10: Security -->
     <section id="security" class="section">
       <div class="container">
         <h2>Security and Governance</h2>
-        <p class="section-lead">Design objectives for a self-hosted control plane. No certifications are claimed.</p>
+        <p class="section-lead">Design objectives for a self-hosted control plane. No certifications, compliance attestations, or penetration-test results are claimed.</p>
+        <div class="security-diagram">
+          <div class="sec-box">Infrastructure Environments</div>
+          <div class="sec-arrow">→</div>
+          <div class="sec-box">Provider Access Boundaries</div>
+          <div class="sec-arrow">→</div>
+          <div class="sec-box highlight">Control Plane<br>(Self-hosted)</div>
+          <div class="sec-arrow">→</div>
+          <div class="sec-box">Administrative Users<br>+ Governance</div>
+        </div>
         <div class="grid">
-          <article class="card"><h3>Self-hosted Ownership</h3><p>Control plane operated under organizational ownership.</p></article>
-          <article class="card"><h3>Identity Boundaries</h3><p>Least-privilege and role-based access as design goals.</p></article>
-          <article class="card"><h3>Policy-driven Changes</h3><p>Changes evaluated against policy before application.</p></article>
+          <article class="card"><h3>Self-hosted Ownership</h3><p>Control plane operated under organizational ownership and control.</p></article>
+          <article class="card"><h3>Identity and Access Boundaries</h3><p>Least-privilege and role-based access as design goals.</p></article>
+          <article class="card"><h3>Policy-driven Governance</h3><p>Changes evaluated against policy before application.</p></article>
           <article class="card"><h3>Auditability</h3><p>Change history and operational accountability as design objectives.</p></article>
+          <article class="card"><h3>Credential Protection</h3><p>Secure handling of provider credentials as a design goal.</p></article>
+          <article class="card"><h3>Operational Accountability</h3><p>Clear responsibility for infrastructure changes.</p></article>
         </div>
       </div>
     </section>
 
+    <!-- Use cases -->
+    <section id="use-cases" class="section section-alt">
+      <div class="container">
+        <h2>Enterprise Use Cases</h2>
+        <div class="grid">
+          <article class="card"><h3>Multi-cloud Consolidation</h3><p>Bring management of multiple public clouds under one control plane to reduce fragmented tooling.</p></article>
+          <article class="card"><h3>Hybrid Modernization</h3><p>Maintain consistent operations while extending or migrating between on-premises and cloud.</p></article>
+          <article class="card"><h3>Regulated Governance</h3><p>Support auditability and policy enforcement for finance, healthcare, and government environments.</p></article>
+          <article class="card"><h3>Operational Risk Reduction</h3><p>Reduce configuration drift and uncontrolled change through visibility and alignment.</p></article>
+          <article class="card"><h3>Provider Independence</h3><p>Avoid dependence on any single cloud provider’s management tools.</p></article>
+          <article class="card"><h3>Centralized Visibility</h3><p>Single operational view of infrastructure across heterogeneous environments.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="section cta">
       <div class="container">
         <h2>Own Your Infrastructure Control Plane.</h2>
@@ -226,6 +374,6 @@
       <p class="copyright">© 2026 Cosinfotechs Solutions</p>
     </div>
   </footer>
-  <script src="script.js?v=motion2"></script>
+  <script src="script.js?v=full18"></script>
 </body>
 </html>
