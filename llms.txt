@@ -1,0 +1,13 @@
+# InfraSphere
+Independent Multi-Cloud Infrastructure Control Plane by Cosinfotechs Solutions.
+Canonical: https://sbruices.github.io/InfraSphere-Website/
+
+Public resources:
+- What is an independent infrastructure control plane
+- Multi-cloud management
+- Desired-state management
+- Infrastructure reconciliation
+- Configuration drift
+- Governance and security
+
+Statuses reflect actual maturity. No certifications claimed.

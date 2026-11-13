@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sbruices.github.io/InfraSphere-Website/</loc>
-  </url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/infrastructure-control-plane.html</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/multi-cloud-management.html</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/hybrid-infrastructure.html</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/desired-state-management.html</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/infrastructure-reconciliation.html</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/configuration-drift.html</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/infrastructure-governance.html</loc></url>
+  <url><loc>https://sbruices.github.io/InfraSphere-Website/resources/infrastructure-security.html</loc></url>
 </urlset>
