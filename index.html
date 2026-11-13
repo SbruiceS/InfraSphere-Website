@@ -4,10 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InfraSphere | Independent Multi-Cloud Infrastructure Control Plane</title>
-  <meta name="description" content="InfraSphere by Cosinfotechs Solutions — Independent, self-hosted multi-cloud and hybrid infrastructure control plane for desired-state management, governance, and operational consistency.">
+  <meta name="description" content="InfraSphere by Cosinfotechs Solutions is an independent, self-hosted multi-cloud and hybrid infrastructure control plane for desired-state management, governance, and operational consistency.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sbruices.github.io/InfraSphere-Website/">
   <meta name="theme-color" content="#FFFFFF">
+  <meta name="author" content="Cosinfotechs Solutions">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="styles.css?v=full18">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="InfraSphere | Independent Multi-Cloud Infrastructure Control Plane">
+  <meta property="og:description" content="Independent, self-hosted multi-cloud and hybrid infrastructure control plane for desired-state management, governance, and operational consistency.">
+  <meta property="og:url" content="https://sbruices.github.io/InfraSphere-Website/">
+  <meta property="og:image" content="https://sbruices.github.io/InfraSphere-Website/assets/logo.png">
+  <meta property="og:site_name" content="InfraSphere">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="InfraSphere | Independent Multi-Cloud Infrastructure Control Plane">
+  <meta name="twitter:description" content="Independent, self-hosted multi-cloud and hybrid infrastructure control plane for desired-state management, governance, and operational consistency.">
+  <meta name="twitter:image" content="https://sbruices.github.io/InfraSphere-Website/assets/logo.png">
+
+  <link rel="stylesheet" href="styles.css?v=seo">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Cosinfotechs Solutions",
+        "url": "https://sbruices.github.io/InfraSphere-Website/",
+        "logo": "https://sbruices.github.io/InfraSphere-Website/assets/logo.png"
+      },
+      {
+        "@type": "WebSite",
+        "name": "InfraSphere",
+        "url": "https://sbruices.github.io/InfraSphere-Website/",
+        "description": "Independent Multi-Cloud Infrastructure Control Plane",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cosinfotechs Solutions"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "InfraSphere",
+        "applicationCategory": "InfrastructureManagementApplication",
+        "description": "Independent, self-hosted multi-cloud and hybrid infrastructure control plane for desired-state management, governance, and operational consistency.",
+        "url": "https://sbruices.github.io/InfraSphere-Website/",
+        "operatingSystem": "Self-hosted",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cosinfotechs Solutions"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="header">
@@ -35,7 +89,8 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">INDEPENDENT INFRASTRUCTURE CONTROL</p>
-          <h1>One Control Plane.<br>Every Infrastructure Environment.</h1>
+          <h1>Independent Multi-Cloud Infrastructure Control Plane</h1>
+          <p class="tagline">One Control Plane. Every Infrastructure Environment.</p>
           <p class="lead">An independent, self-hosted control plane designed to bring consistent visibility, desired-state management, governance and operational control across multi-cloud and hybrid infrastructure.</p>
           <div class="hero-actions">
             <a href="#platform" class="btn btn-primary">Explore the Platform</a>
@@ -357,6 +412,25 @@
     </section>
 
     <!-- Contact -->
+    
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details><summary>What is InfraSphere?</summary><p>InfraSphere is an independent, self-hosted multi-cloud and hybrid infrastructure control plane designed for desired-state management, governance, and operational consistency across heterogeneous environments.</p></details>
+          <details><summary>What is an independent infrastructure control plane?</summary><p>An infrastructure control plane maintains the intended configuration of resources and compares it against the observed state in the environments it manages. Independence means the control plane is not tied to any single cloud provider’s management tools.</p></details>
+          <details><summary>How does multi-cloud infrastructure management work?</summary><p>Multi-cloud management provides a unified operational model across different public cloud environments so policy, inventory, and change processes are consistent rather than fragmented by provider console.</p></details>
+          <details><summary>What is desired-state infrastructure management?</summary><p>Desired-state management expresses the intended configuration of infrastructure once and uses that declaration as the baseline for comparison against the actual observed state.</p></details>
+          <details><summary>What is infrastructure reconciliation?</summary><p>Reconciliation is the process of identifying differences between desired and observed state, evaluating them against policy, and supporting controlled alignment. Full closed-loop reconciliation across all environments remains a design objective.</p></details>
+          <details><summary>What is configuration drift?</summary><p>Configuration drift occurs when the actual observed configuration of infrastructure differs from the intended desired state, for example missing resources, unexpected changes, or mismatched settings.</p></details>
+          <details><summary>Does InfraSphere support hybrid infrastructure?</summary><p>Yes. Hybrid infrastructure management is a core design goal so one operational model can apply across public cloud, virtualization, container platforms, and on-premises environments.</p></details>
+          <details><summary>Is InfraSphere self-hosted?</summary><p>Yes. InfraSphere is designed as a self-hosted control plane so organizations retain ownership of their operational model.</p></details>
+          <details><summary>Which infrastructure providers are supported?</summary><p>AWS, Azure, GCP, Kubernetes, and Proxmox are in development. VMware and on-premises / private cloud are planned. Statuses reflect current maturity; nothing is marked production-ready unless verified.</p></details>
+          <details><summary>Is InfraSphere production-ready?</summary><p>InfraSphere is under active development. Certain provider adapters and capabilities exist in various stages of maturity. It should not be treated as fully production-ready across all environments until explicitly verified.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section cta">
       <div class="container">
         <h2>Own Your Infrastructure Control Plane.</h2>

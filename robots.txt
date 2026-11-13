@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sbruices.github.io/InfraSphere-Website/sitemap.xml

@@ -125,3 +125,9 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .conn, .center-node, .story-step { animation: none !important; transition: none !important; }
   * { transition: none !important; }
 }
+
+.tagline { font-size: 1.15rem; font-weight: 500; margin-bottom: 0.75rem; color: var(--text); }
+.faq-list details { background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 0.5rem; padding: 0.75rem 1rem; }
+.faq-list summary { cursor: pointer; font-weight: 500; }
+.faq-list details p { margin-top: 0.5rem; color: var(--text-muted); font-size: 0.92rem; }
+
