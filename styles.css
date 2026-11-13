@@ -281,6 +281,9 @@ h2 { animation: fadeUp 0.6s ease both; }
 
 .logo, .logo-footer {
   background: transparent !important;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 8px rgba(59,130,246,0.5));
+  background: transparent !important;
   filter: drop-shadow(0 2px 10px var(--glow));
 }
 .logo { height: 44px; }
