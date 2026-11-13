@@ -28,7 +28,6 @@ body {
 
   position: fixed; top: -20%; left: 50%; transform: translateX(-50%);
   width: 800px; height: 600px; z-index: -1;
-  background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
   pointer-events: none;
   
 }
