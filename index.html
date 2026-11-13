@@ -140,61 +140,37 @@
     <!-- Why Different -->
     <section id="difference" class="section section-alt">
       <div class="container">
-        <h2>Why InfraSphere Is Different</h2>
-        <p class="section-lead">Built for organizations that need ownership of their infrastructure management layer rather than another vendor console.</p>
+        <h2>How InfraSphere Is Different</h2>
+        <p class="section-lead">The multi-cloud and hybrid management space contains several distinct categories of tools. InfraSphere occupies a specific position: an independent, self-hosted infrastructure control plane focused on ownership, consistency, and governance.</p>
+        
         <div class="difference-grid">
           <div class="diff-item">
-            <strong>Self-hosted control plane</strong>
-            <span>You deploy and own the control plane. Core management is not dependent on a third-party SaaS.</span>
+            <strong>Self-hosted control plane you own</strong>
+            <span>Unlike managed SaaS orchestration platforms that run the control logic in a vendor’s environment, InfraSphere is designed to be deployed and operated by your organization. The control plane itself stays under your control.</span>
           </div>
           <div class="diff-item">
-            <strong>Provider-agnostic model</strong>
-            <span>One consistent approach across multiple clouds and on-premises systems instead of separate tools for each provider.</span>
+            <strong>Not limited to one Infrastructure-as-Code tool</strong>
+            <span>Many platforms are built primarily as runners or governance layers for a single declarative language or a small set of IaC tools. InfraSphere provides a control plane that works across heterogeneous environments rather than being an orchestration layer for one specific provisioning language.</span>
           </div>
           <div class="diff-item">
-            <strong>Governance-first design</strong>
-            <span>Policy, auditability, and controlled change are foundational rather than added features.</span>
+            <strong>Works across clouds and on-premises without requiring Kubernetes</strong>
+            <span>Some continuous-reconciliation approaches are tightly coupled to Kubernetes. InfraSphere is intended to manage traditional and cloud resources as well as container platforms, without making Kubernetes a prerequisite for the control plane.</span>
           </div>
           <div class="diff-item">
-            <strong>Unified operational model</strong>
-            <span>Desired state, observed state, and change management share a single framework across the estate.</span>
+            <strong>Governance and ownership as primary concerns</strong>
+            <span>Many tools focus on provisioning speed, cost optimization, or application deployment. InfraSphere prioritizes consistent desired-state management, policy, auditability, and reduced operational risk across the estate.</span>
+          </div>
+          <div class="diff-item">
+            <strong>Independent of any single cloud provider</strong>
+            <span>Native cloud consoles and provider-specific management services are optimized for one environment. InfraSphere is built to give organizations a provider-agnostic layer so they are not dependent on any one vendor’s management tools.</span>
+          </div>
+          <div class="diff-item">
+            <strong>Unified model for desired and observed state</strong>
+            <span>Rather than treating inventory, policy, and change as separate products, InfraSphere is designed around a single operational model that keeps intended configuration and live reality aligned.</span>
           </div>
         </div>
-      </div>
-    </section>
 
-
-    <!-- Product Examples -->
-    <section id="examples" class="section section-alt">
-      <div class="container">
-        <h2>Product Examples</h2>
-        <p class="section-lead">Concrete examples of how InfraSphere is applied in real operational scenarios.</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Multi-Cloud Resource Inventory</h3>
-            <p>Maintain a single inventory of virtual machines, networks, storage, and identity resources across AWS, Azure, and GCP. Changes made in any environment are reflected in one place for review and control.</p>
-          </article>
-          <article class="card">
-            <h3>Consistent Security Policy</h3>
-            <p>Apply the same network access rules, encryption requirements, and identity controls across public cloud and on-premises environments without maintaining separate policy tools for each provider.</p>
-          </article>
-          <article class="card">
-            <h3>Configuration Drift Detection</h3>
-            <p>Detect when a production virtual machine or database has diverged from the approved configuration and surface the difference for review before it affects compliance or reliability.</p>
-          </article>
-          <article class="card">
-            <h3>Hybrid Workload Placement</h3>
-            <p>Place new workloads on the appropriate cloud or on-premises environment based on cost, latency, data residency, or compliance requirements, then manage them under the same control model.</p>
-          </article>
-          <article class="card">
-            <h3>Audit-Ready Change History</h3>
-            <p>Produce a clear record of who requested a change, what was approved, and when it was applied across environments—supporting internal audits and regulatory reviews.</p>
-          </article>
-          <article class="card">
-            <h3>Kubernetes and Traditional Infrastructure Together</h3>
-            <p>Manage both container platforms and traditional virtual machines or bare-metal systems through one operational framework rather than separate processes.</p>
-          </article>
-        </div>
+        <p class="section-note">These distinctions reflect the categories of tools commonly used for multi-cloud and hybrid management (infrastructure-as-code platforms, SaaS orchestration layers, Kubernetes-native controllers, enterprise cloud management suites, and provider-native consoles). InfraSphere is positioned as an independent control plane for organizations that require ownership of the management layer.</p>
       </div>
     </section>
 

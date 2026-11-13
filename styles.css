@@ -124,3 +124,5 @@ h2 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0.75rem; }
   .diag-arrow { transform: rotate(90deg); }
 }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.section-note { margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem; max-width: 800px; }
