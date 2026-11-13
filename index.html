@@ -2,232 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="InfraSphere by Cosinfotechs Solutions — Independent multi-cloud infrastructure control plane for secure, unified management across clouds and hybrid environments.">
-  <meta name="theme-color" content="#ffffff">
-  <title>InfraSphere | Cosinfotechs Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfraSphere | Independent Multi-Cloud Infrastructure Control Plane</title>
+  <meta name="description" content="InfraSphere by Cosinfotechs Solutions — Independent multi-cloud infrastructure control plane for desired-state management, governance, and operational consistency across heterogeneous environments.">
+  <meta name="theme-color" content="#080D18">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="styles.css?v=responsive">
+  <link rel="stylesheet" href="styles.css?v=enterprise">
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="#" class="logo-link" aria-label="InfraSphere home">
-        <img src="assets/logo.png" alt="InfraSphere" class="logo">
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#overview">Overview</a>
+      <a href="#top" class="logo-link"><img src="assets/logo.png" alt="InfraSphere" class="logo"></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#platform">Platform</a>
         <a href="#capabilities">Capabilities</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#integrations">Integrations</a>
         <a href="#use-cases">Use Cases</a>
-        <a href="#difference">Why Different</a>
-        <a href="#examples">Examples</a>
-        <a href="#how">How It Works</a>
-        <a href="#contact">Contact</a>
+        <a href="#security">Security</a>
+        <a href="#resources">Resources</a>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#contact" class="btn btn-small">Contact</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero / Overview lead -->
+  <main id="top">
     <section class="hero">
       <div class="container">
-        <div class="hero-content">
-          <p class="eyebrow">Cosinfotechs Solutions</p>
-          <h1>InfraSphere</h1>
-          <p class="tagline">Independent multi-cloud infrastructure control plane.</p>
-          <p class="lead">Define, manage, secure, and govern infrastructure across public clouds and on-premises environments from a single, self-hosted control plane. Designed for organizations that require ownership, consistency, and compliance without vendor lock-in.</p>
-          <div class="hero-actions">
-            <a href="#capabilities" class="btn btn-primary">Explore Capabilities</a>
-            <a href="#use-cases" class="btn btn-secondary">View Use Cases</a>
+        <p class="eyebrow">Cosinfotechs Solutions</p>
+        <h1>One Control Plane.<br>Every Infrastructure Environment.</h1>
+        <p class="lead">Take independent control of your multi-cloud and hybrid infrastructure. Define desired state, enforce governance, and maintain operational consistency across heterogeneous environments through a self-hosted infrastructure control plane.</p>
+        <div class="hero-actions">
+          <a href="#platform" class="btn btn-primary">Explore the Platform</a>
+          <a href="#architecture" class="btn btn-secondary">Understand the Architecture</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="control-plane">InfraSphere Control Plane</div>
+          <div class="provider-row">
+            <span>AWS</span><span>Azure</span><span>GCP</span><span>Kubernetes</span><span>VMware</span><span>Proxmox</span><span>On-premises</span>
           </div>
+          <p class="visual-note">Illustrative topology — conceptual representation of multi-environment control</p>
         </div>
       </div>
     </section>
 
-    <!-- Overview -->
-    <section id="overview" class="section">
+    <section id="platform" class="section">
       <div class="container">
-        <h2>Overview</h2>
-        <p class="section-lead">InfraSphere provides a unified operational model for multi-cloud and hybrid infrastructure. It enables organizations to maintain consistent control, visibility, and governance across heterogeneous environments.</p>
-        <div class="overview-grid">
-          <div class="overview-item">
-            <h3>Unified Control</h3>
-            <p>One control plane for desired state, observed state, and change management across all environments.</p>
-          </div>
-          <div class="overview-item">
-            <h3>Independence</h3>
-            <p>Self-hosted and provider-agnostic. You own the management layer rather than depending on a single vendor’s console or SaaS.</p>
-          </div>
-          <div class="overview-item">
-            <h3>Governance & Compliance</h3>
-            <p>Centralized policy, auditability, and risk reduction for regulated and security-sensitive workloads.</p>
-          </div>
-          <div class="overview-item">
-            <h3>Operational Efficiency</h3>
-            <p>Reduce fragmentation, configuration drift, and manual effort through consistent automation and visibility.</p>
-          </div>
-        </div>
+        <h2>Platform Overview</h2>
+        <p class="section-lead">InfraSphere is an independent, self-hosted infrastructure control plane designed to provide a unified operational model across public clouds, virtualization platforms, container environments, and on-premises infrastructure.</p>
       </div>
     </section>
 
-    <!-- Capabilities -->
     <section id="capabilities" class="section section-alt">
       <div class="container">
         <h2>Capabilities</h2>
-        <p class="section-lead">Core capabilities that support enterprise multi-cloud and hybrid operations at scale.</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Multi-Environment Management</h3>
-            <p>Manage resources across AWS, Azure, GCP, Kubernetes, VMware, Proxmox, and on-premises systems through a single operational model.</p>
-          </article>
-          <article class="card">
-            <h3>Desired State & Reconciliation</h3>
-            <p>Define intended configuration once and continuously align live environments, reducing drift and manual intervention.</p>
-          </article>
-          <article class="card">
-            <h3>Policy & Governance</h3>
-            <p>Apply consistent policies and controls across environments to meet security, compliance, and operational standards.</p>
-          </article>
-          <article class="card">
-            <h3>Visibility & Intelligence</h3>
-            <p>Gain a clear view of dependencies, change impact, and infrastructure health to support informed decisions.</p>
-          </article>
-          <article class="card">
-            <h3>Security Posture</h3>
-            <p>Support consistent security practices and auditability without exposing internal implementation details.</p>
-          </article>
-          <article class="card">
-            <h3>Hybrid Operations</h3>
-            <p>Bridge public cloud and on-premises infrastructure with a unified approach to change and control.</p>
-          </article>
+        <div class="grid">
+          <article class="card"><h3>Unified Infrastructure Control</h3><p>Centralized operational visibility and management across heterogeneous infrastructure environments.</p></article>
+          <article class="card"><h3>Desired-State Management</h3><p>Define intended configurations and compare them against observed infrastructure states.</p></article>
+          <article class="card"><h3>Continuous Reconciliation</h3><p>Identify configuration drift and support controlled alignment between desired and observed states.</p></article>
+          <article class="card"><h3>Policy and Governance</h3><p>Establish consistent policy evaluation, governance boundaries, and operational controls.</p></article>
+          <article class="card"><h3>Infrastructure Intelligence</h3><p>Visibility into dependencies, configuration changes, operational health, and resource relationships.</p></article>
+          <article class="card"><h3>Hybrid Infrastructure Operations</h3><p>Unified management approach across cloud, virtualization, container platforms, and on-premises environments.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Use Cases -->
+    <section id="architecture" class="section">
+      <div class="container">
+        <h2>Infrastructure Architecture</h2>
+        <p class="section-lead">Conceptual layered model. Components marked as conceptual are design objectives and are not claimed as fully implemented production capabilities.</p>
+        <div class="layers">
+          <div class="layer"><strong>Layer 1 — Infrastructure Providers</strong><span>AWS, Azure, GCP, VMware, Proxmox, Kubernetes, on-premises</span></div>
+          <div class="layer"><strong>Layer 2 — Infrastructure Connectors</strong><span>Provider adapters, discovery, state collection (conceptual / in development)</span></div>
+          <div class="layer"><strong>Layer 3 — Control Plane</strong><span>Resource inventory, desired/observed state, reconciliation (core design)</span></div>
+          <div class="layer"><strong>Layer 4 — Governance and Security</strong><span>Policy evaluation, identity, authorization, audit (design objectives)</span></div>
+          <div class="layer"><strong>Layer 5 — Intelligence and Operations</strong><span>Visualization, dependency mapping, reporting (conceptual)</span></div>
+          <div class="layer"><strong>Layer 6 — Management Interface</strong><span>Dashboard, explorer, policy and environment management (illustrative)</span></div>
+        </div>
+        <p class="note">This diagram is a conceptual architecture illustration. It does not represent verified production integrations or completed features.</p>
+      </div>
+    </section>
+
+    <section id="integrations" class="section section-alt">
+      <div class="container">
+        <h2>Integrations Ecosystem</h2>
+        <p class="section-lead">Status reflects current implementation maturity. Only verified implementations are marked Available.</p>
+        <div class="grid">
+          <article class="card"><h3>Amazon Web Services</h3><p>Cloud · <em>In Development</em></p></article>
+          <article class="card"><h3>Microsoft Azure</h3><p>Cloud · <em>In Development</em></p></article>
+          <article class="card"><h3>Google Cloud Platform</h3><p>Cloud · <em>In Development</em></p></article>
+          <article class="card"><h3>Kubernetes</h3><p>Container Platforms · <em>In Development</em></p></article>
+          <article class="card"><h3>VMware</h3><p>Virtualization · <em>Planned</em></p></article>
+          <article class="card"><h3>Proxmox</h3><p>Virtualization · <em>In Development</em></p></article>
+          <article class="card"><h3>On-premises / Private Cloud</h3><p>Infrastructure · <em>Planned</em></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" class="section">
+      <div class="container">
+        <h2>Security and Governance</h2>
+        <p class="section-lead">Design objectives for a self-hosted control plane. No certifications or compliance attestations are claimed.</p>
+        <div class="grid">
+          <article class="card"><h3>Self-hosted Ownership</h3><p>Control plane operated under organizational ownership.</p></article>
+          <article class="card"><h3>Identity and Access</h3><p>Role-based access and least-privilege principles as design goals.</p></article>
+          <article class="card"><h3>Policy-driven Governance</h3><p>Consistent evaluation of changes against organizational policy.</p></article>
+          <article class="card"><h3>Auditability</h3><p>Change history and operational accountability as design objectives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reconciliation" class="section section-alt">
+      <div class="container">
+        <h2>Desired-State Reconciliation</h2>
+        <p class="section-lead">Intended operational model. Distinguishes the design goal from currently implemented functionality.</p>
+        <ol class="steps">
+          <li>Define Desired State</li>
+          <li>Discover Observed State</li>
+          <li>Compare Configuration</li>
+          <li>Detect Drift</li>
+          <li>Evaluate Policies</li>
+          <li>Authorize Changes</li>
+          <li>Reconcile and Verify</li>
+        </ol>
+        <p class="note">This flow describes the intended model. Full closed-loop reconciliation across all environments is a design objective, not a claim of current complete implementation.</p>
+      </div>
+    </section>
+
     <section id="use-cases" class="section">
       <div class="container">
-        <h2>Use Cases</h2>
-        <p class="section-lead">How organizations apply InfraSphere to address real operational and governance challenges.</p>
-        <div class="use-case-list">
-          <div class="use-case">
-            <h3>Enterprise Multi-Cloud Consolidation</h3>
-            <p>Bring management of multiple public clouds under one control plane to eliminate fragmented tooling and inconsistent processes.</p>
-          </div>
-          <div class="use-case">
-            <h3>Regulated Industry Compliance</h3>
-            <p>Establish clear audit trails, policy enforcement, and ownership of the control layer for finance, healthcare, government, and other regulated environments.</p>
-          </div>
-          <div class="use-case">
-            <h3>Hybrid Infrastructure Modernization</h3>
-            <p>Maintain consistent operations while migrating or extending workloads between on-premises and public cloud environments.</p>
-          </div>
-          <div class="use-case">
-            <h3>Operational Risk Reduction</h3>
-            <p>Minimize configuration drift, uncontrolled changes, and operational surprises through continuous alignment and visibility.</p>
-          </div>
-          <div class="use-case">
-            <h3>Vendor Independence</h3>
-            <p>Avoid lock-in to any single cloud provider’s management tools while retaining the ability to use best-of-breed services.</p>
-          </div>
+        <h2>Enterprise Use Cases</h2>
+        <div class="grid">
+          <article class="card"><h3>Multi-cloud Consolidation</h3><p>Bring management of multiple public clouds under one control plane to reduce fragmented tooling.</p></article>
+          <article class="card"><h3>Hybrid Modernization</h3><p>Maintain consistent operations while extending or migrating between on-premises and cloud.</p></article>
+          <article class="card"><h3>Regulated Governance</h3><p>Support auditability and policy enforcement for finance, healthcare, and government environments.</p></article>
+          <article class="card"><h3>Operational Risk Reduction</h3><p>Reduce configuration drift and uncontrolled change through visibility and alignment.</p></article>
+          <article class="card"><h3>Provider Independence</h3><p>Avoid dependence on any single cloud provider’s management tools.</p></article>
+          <article class="card"><h3>Centralized Visibility</h3><p>Single operational view of infrastructure across heterogeneous environments.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Why Different -->
     <section id="difference" class="section section-alt">
       <div class="container">
-        <h2>How InfraSphere Is Different</h2>
-        <p class="section-lead">The multi-cloud and hybrid management space contains several distinct categories of tools. InfraSphere occupies a specific position: an independent, self-hosted infrastructure control plane focused on ownership, consistency, and governance.</p>
-        
-        <div class="difference-grid">
-          <div class="diff-item">
-            <strong>Self-hosted control plane you own</strong>
-            <span>Unlike managed SaaS orchestration platforms that run the control logic in a vendor’s environment, InfraSphere is designed to be deployed and operated by your organization. The control plane itself stays under your control.</span>
-          </div>
-          <div class="diff-item">
-            <strong>Not limited to one Infrastructure-as-Code tool</strong>
-            <span>Many platforms are built primarily as runners or governance layers for a single declarative language or a small set of IaC tools. InfraSphere provides a control plane that works across heterogeneous environments rather than being an orchestration layer for one specific provisioning language.</span>
-          </div>
-          <div class="diff-item">
-            <strong>Works across clouds and on-premises without requiring Kubernetes</strong>
-            <span>Some continuous-reconciliation approaches are tightly coupled to Kubernetes. InfraSphere is intended to manage traditional and cloud resources as well as container platforms, without making Kubernetes a prerequisite for the control plane.</span>
-          </div>
-          <div class="diff-item">
-            <strong>Governance and ownership as primary concerns</strong>
-            <span>Many tools focus on provisioning speed, cost optimization, or application deployment. InfraSphere prioritizes consistent desired-state management, policy, auditability, and reduced operational risk across the estate.</span>
-          </div>
-          <div class="diff-item">
-            <strong>Independent of any single cloud provider</strong>
-            <span>Native cloud consoles and provider-specific management services are optimized for one environment. InfraSphere is built to give organizations a provider-agnostic layer so they are not dependent on any one vendor’s management tools.</span>
-          </div>
-          <div class="diff-item">
-            <strong>Unified model for desired and observed state</strong>
-            <span>Rather than treating inventory, policy, and change as separate products, InfraSphere is designed around a single operational model that keeps intended configuration and live reality aligned.</span>
-          </div>
-        </div>
-
-        <p class="section-note">These distinctions reflect the categories of tools commonly used for multi-cloud and hybrid management (infrastructure-as-code platforms, SaaS orchestration layers, Kubernetes-native controllers, enterprise cloud management suites, and provider-native consoles). InfraSphere is positioned as an independent control plane for organizations that require ownership of the management layer.</p>
+        <h2>Competitive Differentiation</h2>
+        <p class="section-lead">InfraSphere is positioned as an independent, self-hosted control plane focused on ownership, multi-environment consistency, and governance. It is not an application runtime platform or a single-IaC orchestrator.</p>
       </div>
     </section>
 
-    <!-- How It Works (high-level) -->
-    <section id="how" class="section">
+    <section id="resources" class="section">
       <div class="container">
-        <h2>How It Works</h2>
-        <p class="section-lead">A clear operational flow that keeps intended configuration and live environments aligned.</p>
-        <div class="diagram">
-          <div class="diag-node">Define Desired State</div>
-          <div class="diag-arrow">→</div>
-          <div class="diag-node">Control Plane</div>
-          <div class="diag-arrow">→</div>
-          <div class="diag-node">Apply Across Environments</div>
-          <div class="diag-arrow">→</div>
-          <div class="diag-node">Observe & Align</div>
-        </div>
-        <div class="how-points">
-          <div class="how-point"><strong>1. Define</strong><span>Express intended infrastructure configuration and constraints once.</span></div>
-          <div class="how-point"><strong>2. Control</strong><span>The control plane evaluates and manages change according to policy.</span></div>
-          <div class="how-point"><strong>3. Apply</strong><span>Changes are applied consistently across the target environments.</span></div>
-          <div class="how-point"><strong>4. Observe</strong><span>Live state is continuously compared and aligned with the desired state.</span></div>
-        </div>
+        <h2>Resources</h2>
+        <p class="section-lead">Technical content will be published as documentation is completed. No external documentation links are provided until corresponding materials exist.</p>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="section cta">
       <div class="container">
-        <h2>Learn More</h2>
-        <p class="section-lead">InfraSphere is developed by Cosinfotechs Solutions for organizations that require secure, independent infrastructure control.</p>
-        <div class="hero-actions">
-          <a href="mailto:contact@cosinfotechs.com" class="btn btn-primary">Contact Us</a>
-        </div>
+        <h2>Own Your Infrastructure Control Plane.</h2>
+        <p class="section-lead">Build a more consistent, governed, and independent approach to managing your infrastructure environments.</p>
+        <a href="mailto:contact@cosinfotechs.com" class="btn btn-primary">Discuss InfraSphere</a>
+        <p class="contact-info">Cosinfotechs Solutions<br>contact@cosinfotechs.com</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
-        <div>
-          <img src="assets/logo.png" alt="InfraSphere" class="logo-footer">
-          <p>Independent multi-cloud infrastructure control plane.<br>Cosinfotechs Solutions</p>
-        </div>
-        <div class="footer-links">
-          <a href="#overview">Overview</a>
-          <a href="#capabilities">Capabilities</a>
-          <a href="#use-cases">Use Cases</a>
-          <a href="#examples">Examples</a>
-        <a href="#how">How It Works</a>
-        </div>
-      </div>
+      <img src="assets/logo.png" alt="InfraSphere" class="logo-footer">
+      <p>Independent Multi-Cloud Infrastructure Control Plane<br>Cosinfotechs Solutions · Beyond Technology. Into Innovation.</p>
       <p class="copyright">© 2026 Cosinfotechs Solutions</p>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
