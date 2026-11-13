@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InfraSphere by Cosinfotechs Solutions — Independent, self-hosted, open-source multi-cloud infrastructure control plane. Secure Rust-based governance, reconciliation, and intelligence for AWS, Azure, GCP and on-prem.">
+  <meta name="keywords" content="InfraSphere, multi-cloud, infrastructure, control plane, Rust, Cosinfotechs Solutions, security, reconciliation, policy">
+  <meta name="author" content="Sbruice Singh, Cosinfotechs Solutions">
+  <meta name="theme-color" content="#0a0e1a">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <title>InfraSphere | Cosinfotechs Solutions</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo-link" aria-label="InfraSphere home">
+        <img src="assets/logo.png" alt="InfraSphere" class="logo" width="280" height="93">
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#security">Security</a>
+        <a href="#providers">Providers</a>
+        <a href="#docs">Docs</a>
+        <a href="https://github.com/SbruiceS/InfraSphere" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Cosinfotechs Solutions · Open Source</p>
+          <h1>InfraSphere</h1>
+          <p class="tagline">Independent, self-hosted, multi-cloud infrastructure control plane.</p>
+          <p class="lead">Define, provision, reconcile, secure, observe, and govern infrastructure across AWS, Azure, GCP, Kubernetes, VMware, Proxmox and more — through a unified, highly secure Rust control plane.</p>
+          <div class="hero-actions">
+            <a href="https://github.com/SbruiceS/InfraSphere" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a href="#features" class="btn btn-secondary">Explore Capabilities</a>
+          </div>
+          <div class="status-pills">
+            <span class="pill">Rust Modular Monolith</span>
+            <span class="pill">OIDC + RBAC</span>
+            <span class="pill">Durable Reconciliation</span>
+            <span class="pill">Apache-2.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Capabilities</h2>
+        <p class="section-lead">Production-oriented foundations for infrastructure intelligence, automation, security, and governance.</p>
+        <div class="grid cards">
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Durable Reconciliation</h3>
+            <p>Operation state machine with leases, retries, idempotency, cancellation, drift detection, and conflict handling. On-demand and scheduled reconciliation.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔐</div>
+            <h3>Security First</h3>
+            <p>OIDC JWT authentication, deny-by-default RBAC, opaque portal sessions, CSRF protection, rate limiting, and browser security headers. No credentials in cookies.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🕸️</div>
+            <h3>Dependency Graph & Planner</h3>
+            <p>Model relationships, detect cycles, compute blast radius, and evaluate changes against policy before execution. Policy-aware change planning.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Intent & Placement</h3>
+            <p>Translate high-level requirements into validated resource plans. Multi-cloud placement optimizer weighing cost, latency, policy, and availability.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📊</div>
+            <h3>Security Analysis</h3>
+            <p>Drift detection, attack-path analysis, closed-loop auto-remediation, multi-cloud webhook ingestion, compliance and risk scoring.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🏢</div>
+            <h3>Multi-Tenant Ready</h3>
+            <p>Organizations, projects, resource model with PostgreSQL system of record, audit trails, and federation-aware control plane design.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section section-alt">
+      <div class="container">
+        <h2>Architecture</h2>
+        <p class="section-lead">Modular Rust workspace. Control plane owns desired state; providers implement a versioned SDK contract.</p>
+        <div class="arch-grid">
+          <div class="arch-block">
+            <h3>Control Plane</h3>
+            <ul>
+              <li>Resource model & lifecycle</li>
+              <li>PostgreSQL persistence</li>
+              <li>Durable reconciliation engine</li>
+              <li>Policy engine & dual approval</li>
+              <li>Graph + planner</li>
+              <li>OIDC + RBAC authorization</li>
+            </ul>
+          </div>
+          <div class="arch-block">
+            <h3>Providers</h3>
+            <ul>
+              <li>AWS · Azure · GCP</li>
+              <li>Kubernetes · VMware</li>
+              <li>Proxmox · Cloudflare · OCI</li>
+              <li>Mock for development</li>
+              <li>Read-only discovery mode</li>
+              <li>Official SDK or thin-cloud paths</li>
+            </ul>
+          </div>
+          <div class="arch-block">
+            <h3>Interfaces</h3>
+            <ul>
+              <li>REST API (Axum)</li>
+              <li>Secure Rust portal</li>
+              <li>CLI</li>
+              <li>Inventory snapshots</li>
+              <li>Webhook ingestion</li>
+              <li>Docker Compose stack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" class="section">
+      <div class="container">
+        <h2>Security Model</h2>
+        <p class="section-lead">Designed with explicit trust boundaries, least privilege, and defense in depth. Phase 1 limitations are documented; production readiness is not claimed.</p>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Opaque Sessions</h3>
+            <p>Portal stores only a session UUID in an HttpOnly, SameSite=Strict cookie. Access tokens never leave the server.</p>
+          </article>
+          <article class="card">
+            <h3>CSRF & Rate Limits</h3>
+            <p>HMAC CSRF tokens on state-changing requests. Login and API rate limiting. Strict security headers (CSP, X-Frame-Options, etc.).</p>
+          </article>
+          <article class="card">
+            <h3>RBAC & Audit</h3>
+            <p>Deny-by-default authorization. All security-relevant actions recorded. No hardcoded secrets; environment or secret manager only.</p>
+          </article>
+          <article class="card">
+            <h3>Threat Model</h3>
+            <p>STRIDE analysis documented. Input validation, optimistic concurrency, and provider isolation. Report vulnerabilities privately.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="providers" class="section section-alt">
+      <div class="container">
+        <h2>Supported Providers</h2>
+        <p class="section-lead">Versioned Provider SDK. Real REST and SDK implementations for major clouds; stubs and mock for development.</p>
+        <div class="provider-grid">
+          <div class="provider">AWS</div>
+          <div class="provider">Azure</div>
+          <div class="provider">GCP</div>
+          <div class="provider">Kubernetes</div>
+          <div class="provider">VMware</div>
+          <div class="provider">Proxmox</div>
+          <div class="provider">Cloudflare</div>
+          <div class="provider">OCI</div>
+          <div class="provider">Mock</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="section">
+      <div class="container">
+        <h2>Get Started</h2>
+        <p class="section-lead">Clone the repository, run the Docker Compose stack, and explore the API and portal.</p>
+        <div class="code-block">
+          <pre><code>git clone https://github.com/SbruiceS/InfraSphere.git
+cd InfraSphere
+docker compose -f deployments/compose/docker-compose.yml up -d --build
+curl -s http://127.0.0.1:8080/healthz</code></pre>
+        </div>
+        <p class="note">See the README and <code>docs/</code> for architecture, security policy, provider matrix, and development guide. Apache-2.0 licensed.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/SbruiceS/InfraSphere" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Source Code</a>
+          <a href="https://github.com/SbruiceS/InfraSphere/blob/main/SECURITY.md" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Security Policy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <img src="assets/logo.png" alt="InfraSphere" class="logo-footer" width="180" height="60">
+          <p>Independent multi-cloud control plane.<br>By Cosinfotechs Solutions.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/SbruiceS/InfraSphere" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/SbruiceS/InfraSphere/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a>
+          <a href="https://github.com/SbruiceS/InfraSphere/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Cosinfotechs Solutions · Sbruice Singh · Apache-2.0</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
