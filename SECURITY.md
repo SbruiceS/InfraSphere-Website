@@ -1,18 +1,19 @@
-# Security notes for the website
+# Security notes for the InfraSphere website
 
-This static site is designed with security in mind:
+Static GitHub Pages site. No backend, no user input forms, no third-party scripts.
 
-- No third-party JavaScript or CSS frameworks loaded from CDNs
-- Content-Security-Policy meta tag restricts sources to `'self'`
-- `X-Content-Type-Options: nosniff`
-- `Referrer-Policy: strict-origin-when-cross-origin`
-- `Permissions-Policy` disables unnecessary features
-- External links use `rel="noopener noreferrer"`
-- No forms that accept user input (marketing site only)
-- Logo and assets are self-hosted
+## Implemented controls
+- Content-Security-Policy meta: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'
+- X-Content-Type-Options: nosniff
+- Referrer-Policy: strict-origin-when-cross-origin
+- Permissions-Policy: disables geolocation, microphone, camera, payment
+- X-Frame-Options: DENY
+- All assets self-hosted
+- External links use rel="noopener noreferrer" where present
+- .nojekyll present
 
-For the full InfraSphere security policy, see the main repository:
+## Limitations (GitHub Pages)
+GitHub Pages does not allow arbitrary response headers on project sites without a custom domain and external CDN. Meta tags provide the practical equivalent for CSP, referrer, and permissions on this static site.
 
-https://github.com/SbruiceS/InfraSphere/blob/main/SECURITY.md
-
-Report website issues via the main repository's private vulnerability process.
+## Reporting
+Report issues via the main InfraSphere repository private vulnerability process.
